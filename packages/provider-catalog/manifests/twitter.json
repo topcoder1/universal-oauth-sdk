@@ -1,0 +1,30 @@
+{
+  "name": "twitter",
+  "displayName": "Twitter (X)",
+  "authorizationEndpoint": "https://twitter.com/i/oauth2/authorize",
+  "tokenEndpoint": "https://api.twitter.com/2/oauth2/token",
+  "revocationEndpoint": "https://api.twitter.com/2/oauth2/revoke",
+  "scopes": [
+    "tweet.read",
+    "tweet.write",
+    "users.read",
+    "follows.read",
+    "follows.write",
+    "offline.access",
+    "space.read",
+    "mute.read",
+    "mute.write",
+    "like.read",
+    "like.write",
+    "list.read",
+    "list.write",
+    "block.read",
+    "block.write",
+    "bookmark.read",
+    "bookmark.write"
+  ],
+  "tokenEndpointAuthMethods": ["client_secret_basic", "client_secret_post"],
+  "pkceRecommended": true,
+  "refreshTokenExpected": true,
+  "notes": "Twitter OAuth 2.0 with PKCE. Requires app creation in Twitter Developer Portal. Use 'offline.access' scope for refresh tokens."
+}

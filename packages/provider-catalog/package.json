@@ -1,0 +1,39 @@
+{
+  "name": "@oauth-kit/provider-catalog",
+  "version": "1.0.0",
+  "description": "OAuth provider manifests for 11+ popular services",
+  "type": "module",
+  "license": "MIT",
+  "main": "index.json",
+  "scripts": {
+    "build": "node -e \"console.log('catalog build (noop)')\"",
+    "test": "node --version && echo \"(tests TBD)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topcoder1/universal-oauth-sdk.git",
+    "directory": "packages/provider-catalog"
+  },
+  "homepage": "https://github.com/topcoder1/universal-oauth-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/topcoder1/universal-oauth-sdk/issues"
+  },
+  "keywords": [
+    "oauth",
+    "providers",
+    "google",
+    "github",
+    "microsoft",
+    "salesforce",
+    "slack",
+    "discord",
+    "spotify",
+    "twitter"
+  ],
+  "author": "topcoder1 <topcoder1@gmail.com>",
+  "files": [
+    "manifests",
+    "schema",
+    "README.md"
+  ]
+}

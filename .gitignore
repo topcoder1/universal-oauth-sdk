@@ -1,0 +1,13 @@
+# Node / TypeScript
+node_modules
+dist
+build
+coverage
+*.log
+.env
+.env.*
+tokens.db
+# Mac/OS
+.DS_Store
+# pnpm
+pnpm-lock.yaml

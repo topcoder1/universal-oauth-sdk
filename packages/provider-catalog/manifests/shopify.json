@@ -1,0 +1,20 @@
+{
+  "name": "shopify",
+  "displayName": "Shopify",
+  "authorizationEndpoint": "https://example-shop.myshopify.com/admin/oauth/authorize",
+  "tokenEndpoint": "https://example-shop.myshopify.com/admin/oauth/access_token",
+  "scopes": [
+    "read_products",
+    "write_products",
+    "read_orders",
+    "write_orders",
+    "read_customers",
+    "write_customers",
+    "read_inventory",
+    "write_inventory"
+  ],
+  "tokenEndpointAuthMethods": ["client_secret_post"],
+  "pkceRecommended": false,
+  "refreshTokenExpected": false,
+  "notes": "Shopify OAuth. Replace 'example-shop' in URLs with actual shop name. Tokens don't expire. Requires app creation in Shopify Partners."
+}

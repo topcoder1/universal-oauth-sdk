@@ -1,0 +1,43 @@
+{
+  "name": "@oauth-kit/manifest-tools",
+  "version": "1.0.0",
+  "description": "Validation tools for OAuth provider manifests",
+  "type": "module",
+  "bin": {
+    "oauth-manifest-lint": "dist/lint.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "node dist/lint.js ../provider-catalog/manifests ../provider-catalog/schema/provider.schema.json",
+    "test": "node --version && echo \"(tests TBD)\""
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "glob": "^11.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topcoder1/universal-oauth-sdk.git",
+    "directory": "packages/manifest-tools"
+  },
+  "homepage": "https://github.com/topcoder1/universal-oauth-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/topcoder1/universal-oauth-sdk/issues"
+  },
+  "keywords": [
+    "oauth",
+    "validation",
+    "manifest",
+    "linter"
+  ],
+  "author": "topcoder1 <topcoder1@gmail.com>",
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}

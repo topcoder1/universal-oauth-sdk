@@ -1,0 +1,30 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.pnpm-store": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/pnpm-lock.yaml": true
+  },
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "cascade.autoRunSafeCommands": true,
+  "cascade.commandAllowlist": [
+    "pnpm install",
+    "pnpm build",
+    "pnpm -r build",
+    "pnpm test",
+    "npm install",
+    "npm run build",
+    "tsc",
+    "node --version",
+    "git status",
+    "git diff"
+  ]
+}

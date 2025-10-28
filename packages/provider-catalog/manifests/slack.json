@@ -1,0 +1,21 @@
+{
+  "name": "slack",
+  "displayName": "Slack",
+  "authorizationEndpoint": "https://slack.com/oauth/v2/authorize",
+  "tokenEndpoint": "https://slack.com/api/oauth.v2.access",
+  "revocationEndpoint": "https://slack.com/api/auth.revoke",
+  "scopes": [
+    "channels:read",
+    "channels:write",
+    "chat:write",
+    "users:read",
+    "users:read.email",
+    "files:read",
+    "files:write",
+    "team:read"
+  ],
+  "tokenEndpointAuthMethods": ["client_secret_post"],
+  "pkceRecommended": false,
+  "refreshTokenExpected": true,
+  "notes": "Slack OAuth v2. Requires app creation in Slack API portal. Bot tokens use different scopes (bot prefix)."
+}

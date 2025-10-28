@@ -1,0 +1,30 @@
+{
+  "name": "spotify",
+  "displayName": "Spotify",
+  "authorizationEndpoint": "https://accounts.spotify.com/authorize",
+  "tokenEndpoint": "https://accounts.spotify.com/api/token",
+  "scopes": [
+    "user-read-email",
+    "user-read-private",
+    "user-read-playback-state",
+    "user-modify-playback-state",
+    "user-read-currently-playing",
+    "user-read-recently-played",
+    "user-top-read",
+    "playlist-read-private",
+    "playlist-read-collaborative",
+    "playlist-modify-public",
+    "playlist-modify-private",
+    "user-library-read",
+    "user-library-modify",
+    "user-follow-read",
+    "user-follow-modify",
+    "streaming",
+    "app-remote-control",
+    "user-read-playback-position"
+  ],
+  "tokenEndpointAuthMethods": ["client_secret_post", "client_secret_basic"],
+  "pkceRecommended": true,
+  "refreshTokenExpected": true,
+  "notes": "Spotify OAuth 2.0. Requires app creation in Spotify Developer Dashboard. PKCE recommended for public clients."
+}

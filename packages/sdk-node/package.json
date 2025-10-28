@@ -1,0 +1,58 @@
+{
+  "name": "@oauth-kit/sdk",
+  "version": "1.0.0",
+  "description": "Universal OAuth 2.0 SDK with PKCE, device flow, and token encryption",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "dependencies": {
+    "jose": "^5.9.0",
+    "openid-client": "^5.6.5",
+    "undici": "^6.19.8"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^9.6.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^20.0.0",
+    "@vitest/ui": "^4.0.4",
+    "typescript": "^5.6.3",
+    "vitest": "^4.0.4"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topcoder1/universal-oauth-sdk.git",
+    "directory": "packages/sdk-node"
+  },
+  "homepage": "https://github.com/topcoder1/universal-oauth-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/topcoder1/universal-oauth-sdk/issues"
+  },
+  "keywords": [
+    "oauth",
+    "oauth2",
+    "oidc",
+    "authentication",
+    "google",
+    "github",
+    "microsoft",
+    "pkce",
+    "device-flow",
+    "encryption",
+    "typescript"
+  ],
+  "author": "topcoder1 <topcoder1@gmail.com>",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}

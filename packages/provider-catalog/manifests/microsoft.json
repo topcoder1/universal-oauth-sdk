@@ -1,0 +1,21 @@
+{
+  "name": "microsoft",
+  "displayName": "Microsoft",
+  "authorizationEndpoint": "https://login.microsoftonline.com/common/oauth2/v2.0/authorize",
+  "tokenEndpoint": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
+  "revocationEndpoint": "https://login.microsoftonline.com/common/oauth2/v2.0/logout",
+  "scopes": [
+    "openid",
+    "profile",
+    "email",
+    "offline_access",
+    "User.Read",
+    "Files.Read",
+    "Mail.Read",
+    "Calendars.Read"
+  ],
+  "tokenEndpointAuthMethods": ["client_secret_post", "client_secret_basic"],
+  "pkceRecommended": true,
+  "refreshTokenExpected": true,
+  "notes": "Microsoft Identity Platform (Azure AD v2.0). Use 'common' tenant for multi-tenant apps, or replace with specific tenant ID. Requires app registration in Azure Portal."
+}

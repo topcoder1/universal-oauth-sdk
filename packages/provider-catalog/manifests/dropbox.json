@@ -1,0 +1,15 @@
+{
+  "name": "dropbox",
+  "displayName": "Dropbox",
+  "authorizationEndpoint": "https://www.dropbox.com/oauth2/authorize",
+  "tokenEndpoint": "https://api.dropboxapi.com/oauth2/token",
+  "revocationEndpoint": "https://api.dropboxapi.com/2/auth/token/revoke",
+  "scopes": [],
+  "tokenEndpointAuthMethods": ["client_secret_post", "client_secret_basic"],
+  "pkceRecommended": true,
+  "refreshTokenExpected": true,
+  "extraAuthorizeParams": {
+    "token_access_type": "offline"
+  },
+  "notes": "Dropbox OAuth 2.0. Scopes are not used; permissions are set in app settings. Use token_access_type=offline for refresh tokens."
+}

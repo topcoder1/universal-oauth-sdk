@@ -1,0 +1,18 @@
+{
+  "name": "github",
+  "displayName": "GitHub",
+  "authorizationEndpoint": "https://github.com/login/oauth/authorize",
+  "tokenEndpoint": "https://github.com/login/oauth/access_token",
+  "scopes": [
+    "read:user",
+    "user:email"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post",
+    "client_secret_basic"
+  ],
+  "pkceRecommended": true,
+  "deviceCodeSupported": true,
+  "refreshTokenExpected": false,
+  "notes": "GitHub classic OAuth apps do not issue refresh tokens; use GitHub Apps/OIDC for advanced use."
+}

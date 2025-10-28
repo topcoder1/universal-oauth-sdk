@@ -1,0 +1,17 @@
+{
+  "name": "@oauth-kit/examples-node",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node dist/example.js",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@oauth-kit/sdk": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^20.0.0"
+  }
+}

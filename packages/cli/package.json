@@ -1,0 +1,47 @@
+{
+  "name": "@oauth-kit/cli",
+  "version": "1.0.0",
+  "description": "CLI tool for managing OAuth tokens with multiple providers",
+  "type": "module",
+  "bin": {
+    "oauth": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --version && echo \"(tests TBD)\""
+  },
+  "dependencies": {
+    "@oauth-kit/sdk": "workspace:*",
+    "commander": "^12.1.0",
+    "inquirer": "^9.3.7"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.6.3"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topcoder1/universal-oauth-sdk.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/topcoder1/universal-oauth-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/topcoder1/universal-oauth-sdk/issues"
+  },
+  "keywords": [
+    "oauth",
+    "cli",
+    "token",
+    "authentication",
+    "google",
+    "github",
+    "microsoft"
+  ],
+  "author": "topcoder1 <topcoder1@gmail.com>",
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}

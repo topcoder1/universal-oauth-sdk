@@ -1,0 +1,16 @@
+{
+  "name": "linkedin",
+  "displayName": "LinkedIn",
+  "authorizationEndpoint": "https://www.linkedin.com/oauth/v2/authorization",
+  "tokenEndpoint": "https://www.linkedin.com/oauth/v2/accessToken",
+  "scopes": [
+    "openid",
+    "profile",
+    "email",
+    "w_member_social"
+  ],
+  "tokenEndpointAuthMethods": ["client_secret_post"],
+  "pkceRecommended": false,
+  "refreshTokenExpected": true,
+  "notes": "LinkedIn OAuth 2.0. Requires app creation in LinkedIn Developers portal. Some scopes require LinkedIn Partner Program membership."
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProviderManifest",
+  "type": "object",
+  "required": [
+    "name",
+    "displayName",
+    "authorizationEndpoint",
+    "tokenEndpoint",
+    "scopes"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "displayName": {
+      "type": "string"
+    },
+    "authorizationEndpoint": {
+      "type": "string",
+      "format": "uri"
+    },
+    "tokenEndpoint": {
+      "type": "string",
+      "format": "uri"
+    },
+    "revocationEndpoint": {
+      "type": "string",
+      "format": "uri"
+    },
+    "scopes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tokenEndpointAuthMethods": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pkceRecommended": {
+      "type": "boolean"
+    },
+    "deviceCodeSupported": {
+      "type": "boolean"
+    },
+    "refreshTokenExpected": {
+      "type": "boolean"
+    },
+    "extraAuthorizeParams": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

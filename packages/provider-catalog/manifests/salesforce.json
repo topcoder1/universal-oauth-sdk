@@ -1,0 +1,21 @@
+{
+  "name": "salesforce",
+  "displayName": "Salesforce",
+  "authorizationEndpoint": "https://login.salesforce.com/services/oauth2/authorize",
+  "tokenEndpoint": "https://login.salesforce.com/services/oauth2/token",
+  "revocationEndpoint": "https://login.salesforce.com/services/oauth2/revoke",
+  "scopes": [
+    "api",
+    "refresh_token",
+    "openid",
+    "profile",
+    "email",
+    "full",
+    "chatter_api",
+    "web"
+  ],
+  "tokenEndpointAuthMethods": ["client_secret_post"],
+  "pkceRecommended": true,
+  "refreshTokenExpected": true,
+  "notes": "For sandbox environments, use https://test.salesforce.com instead of https://login.salesforce.com. Requires Connected App in Salesforce Setup."
+}
