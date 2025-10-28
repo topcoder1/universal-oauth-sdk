@@ -1,5 +1,5 @@
 {
-  "name": "@oauth-kit/cli",
+  "name": "@topcoder1/oauth-cli",
   "version": "1.0.0",
   "description": "CLI tool for managing OAuth tokens with multiple providers",
   "type": "module",
@@ -11,7 +11,7 @@
     "test": "node --version && echo \"(tests TBD)\""
   },
   "dependencies": {
-    "@oauth-kit/sdk": "workspace:*",
+    "@topcoder1/oauth-sdk": "workspace:*",
     "commander": "^12.1.0",
     "inquirer": "^9.3.7"
   },

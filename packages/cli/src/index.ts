@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { Command } from "commander";
 import inquirer from "inquirer";
-import { ProviderRegistry, createClient, SQLiteStore } from "@oauth-kit/sdk";
+import { ProviderRegistry, createClient, SQLiteStore } from "@topcoder1/oauth-sdk";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";

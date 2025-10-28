@@ -1,5 +1,5 @@
 {
-  "name": "@oauth-kit/provider-catalog",
+  "name": "@topcoder1/oauth-provider-catalog",
   "version": "1.0.0",
   "description": "OAuth provider manifests for 11+ popular services",
   "type": "module",

@@ -1,5 +1,5 @@
 {
-  "name": "@oauth-kit/sdk",
+  "name": "@topcoder1/oauth-sdk",
   "version": "1.0.0",
   "description": "Universal OAuth 2.0 SDK with PKCE, device flow, and token encryption",
   "type": "module",

@@ -1,5 +1,5 @@
 {
-  "name": "@oauth-kit/manifest-tools",
+  "name": "@topcoder1/oauth-manifest-tools",
   "version": "1.0.0",
   "description": "Validation tools for OAuth provider manifests",
   "type": "module",
