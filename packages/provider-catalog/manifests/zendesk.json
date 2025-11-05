@@ -1,0 +1,17 @@
+{
+  "name": "zendesk",
+  "displayName": "Zendesk",
+  "authorizationEndpoint": "https://{subdomain}.zendesk.com/oauth/authorizations/new",
+  "tokenEndpoint": "https://{subdomain}.zendesk.com/oauth/tokens",
+  "scopes": [
+    "read",
+    "write"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post"
+  ],
+  "pkceRecommended": false,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": false,
+  "notes": "Zendesk OAuth for support ticket access. Replace {subdomain} with your Zendesk subdomain."
+}

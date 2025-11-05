@@ -1,0 +1,19 @@
+{
+  "name": "zoom",
+  "displayName": "Zoom",
+  "authorizationEndpoint": "https://zoom.us/oauth/authorize",
+  "tokenEndpoint": "https://zoom.us/oauth/token",
+  "scopes": [
+    "user:read",
+    "meeting:read",
+    "meeting:write"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post",
+    "client_secret_basic"
+  ],
+  "pkceRecommended": true,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": true,
+  "notes": "Zoom OAuth for accessing Zoom APIs. Requires Zoom App with OAuth credentials."
+}

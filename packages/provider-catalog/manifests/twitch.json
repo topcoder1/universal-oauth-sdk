@@ -1,0 +1,22 @@
+{
+  "name": "twitch",
+  "displayName": "Twitch",
+  "authorizationEndpoint": "https://id.twitch.tv/oauth2/authorize",
+  "tokenEndpoint": "https://id.twitch.tv/oauth2/token",
+  "revocationEndpoint": "https://id.twitch.tv/oauth2/revoke",
+  "scopes": [
+    "user:read:email",
+    "channel:read:subscriptions",
+    "channel:manage:broadcast"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post"
+  ],
+  "pkceRecommended": false,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": true,
+  "extraAuthorizeParams": {
+    "force_verify": "true"
+  },
+  "notes": "Twitch OAuth for accessing Twitch APIs. Requires Twitch application registration."
+}

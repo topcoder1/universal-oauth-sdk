@@ -1,0 +1,17 @@
+{
+  "name": "notion",
+  "displayName": "Notion",
+  "authorizationEndpoint": "https://api.notion.com/v1/oauth/authorize",
+  "tokenEndpoint": "https://api.notion.com/v1/oauth/token",
+  "scopes": [],
+  "tokenEndpointAuthMethods": [
+    "client_secret_basic"
+  ],
+  "pkceRecommended": false,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": false,
+  "extraAuthorizeParams": {
+    "owner": "user"
+  },
+  "notes": "Notion OAuth for workspace integrations. Access tokens do not expire. Requires Notion integration."
+}

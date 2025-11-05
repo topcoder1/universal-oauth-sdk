@@ -1,0 +1,18 @@
+{
+  "name": "tiktok",
+  "displayName": "TikTok",
+  "authorizationEndpoint": "https://www.tiktok.com/v2/auth/authorize",
+  "tokenEndpoint": "https://open.tiktokapis.com/v2/oauth/token",
+  "scopes": [
+    "user.info.basic",
+    "video.list",
+    "video.upload"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post"
+  ],
+  "pkceRecommended": true,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": true,
+  "notes": "TikTok OAuth for accessing user content and posting. Requires TikTok developer account."
+}

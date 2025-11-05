@@ -7,7 +7,29 @@ coverage
 .env
 .env.*
 tokens.db
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info
+.pytest_cache
+.coverage
+htmlcov/
+*.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
 # Mac/OS
 .DS_Store
-# pnpm
+
+# Package managers
 pnpm-lock.yaml
+package-lock.json

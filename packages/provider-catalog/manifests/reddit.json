@@ -1,0 +1,22 @@
+{
+  "name": "reddit",
+  "displayName": "Reddit",
+  "authorizationEndpoint": "https://www.reddit.com/api/v1/authorize",
+  "tokenEndpoint": "https://www.reddit.com/api/v1/access_token",
+  "scopes": [
+    "identity",
+    "read",
+    "submit",
+    "vote"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_basic"
+  ],
+  "pkceRecommended": false,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": true,
+  "extraAuthorizeParams": {
+    "duration": "permanent"
+  },
+  "notes": "Reddit OAuth for accessing user data and posting. Requires Reddit app registration."
+}

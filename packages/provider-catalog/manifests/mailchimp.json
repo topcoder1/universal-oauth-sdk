@@ -1,0 +1,14 @@
+{
+  "name": "mailchimp",
+  "displayName": "Mailchimp",
+  "authorizationEndpoint": "https://login.mailchimp.com/oauth2/authorize",
+  "tokenEndpoint": "https://login.mailchimp.com/oauth2/token",
+  "scopes": [],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post"
+  ],
+  "pkceRecommended": false,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": false,
+  "notes": "Mailchimp OAuth for email marketing. Access tokens do not expire."
+}

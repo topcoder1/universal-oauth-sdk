@@ -1,0 +1,17 @@
+{
+  "name": "figma",
+  "displayName": "Figma",
+  "authorizationEndpoint": "https://www.figma.com/oauth",
+  "tokenEndpoint": "https://www.figma.com/api/oauth/token",
+  "scopes": [
+    "file_read",
+    "file_write"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post"
+  ],
+  "pkceRecommended": false,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": true,
+  "notes": "Figma OAuth for accessing design files. Requires Figma OAuth app."
+}

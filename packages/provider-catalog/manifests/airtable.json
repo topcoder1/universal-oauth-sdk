@@ -1,0 +1,19 @@
+{
+  "name": "airtable",
+  "displayName": "Airtable",
+  "authorizationEndpoint": "https://airtable.com/oauth2/v1/authorize",
+  "tokenEndpoint": "https://airtable.com/oauth2/v1/token",
+  "scopes": [
+    "data.records:read",
+    "data.records:write",
+    "schema.bases:read",
+    "schema.bases:write"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post"
+  ],
+  "pkceRecommended": true,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": true,
+  "notes": "Airtable OAuth for accessing bases and records. Requires Airtable OAuth integration."
+}

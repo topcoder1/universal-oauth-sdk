@@ -1,0 +1,19 @@
+{
+  "name": "hubspot",
+  "displayName": "HubSpot",
+  "authorizationEndpoint": "https://app.hubspot.com/oauth/authorize",
+  "tokenEndpoint": "https://api.hubapi.com/oauth/v1/token",
+  "scopes": [
+    "crm.objects.contacts.read",
+    "crm.objects.contacts.write",
+    "crm.objects.companies.read",
+    "crm.objects.companies.write"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post"
+  ],
+  "pkceRecommended": false,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": true,
+  "notes": "HubSpot OAuth for CRM access. Requires HubSpot app with OAuth credentials."
+}

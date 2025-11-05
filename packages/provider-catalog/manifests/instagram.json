@@ -1,0 +1,17 @@
+{
+  "name": "instagram",
+  "displayName": "Instagram",
+  "authorizationEndpoint": "https://api.instagram.com/oauth/authorize",
+  "tokenEndpoint": "https://api.instagram.com/oauth/access_token",
+  "scopes": [
+    "user_profile",
+    "user_media"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post"
+  ],
+  "pkceRecommended": false,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": true,
+  "notes": "Instagram Basic Display API. For business features, use Facebook Graph API instead."
+}

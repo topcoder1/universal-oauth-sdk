@@ -1,0 +1,17 @@
+{
+  "name": "snapchat",
+  "displayName": "Snapchat",
+  "authorizationEndpoint": "https://accounts.snapchat.com/login/oauth2/authorize",
+  "tokenEndpoint": "https://accounts.snapchat.com/login/oauth2/access_token",
+  "scopes": [
+    "https://auth.snapchat.com/oauth2/api/user.display_name",
+    "https://auth.snapchat.com/oauth2/api/user.bitmoji.avatar"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post"
+  ],
+  "pkceRecommended": false,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": true,
+  "notes": "Snapchat Login Kit for user authentication. Requires Snapchat app registration."
+}

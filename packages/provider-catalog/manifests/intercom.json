@@ -1,0 +1,14 @@
+{
+  "name": "intercom",
+  "displayName": "Intercom",
+  "authorizationEndpoint": "https://app.intercom.com/oauth",
+  "tokenEndpoint": "https://api.intercom.io/auth/eagle/token",
+  "scopes": [],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post"
+  ],
+  "pkceRecommended": false,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": false,
+  "notes": "Intercom OAuth for customer messaging. Access tokens do not expire."
+}

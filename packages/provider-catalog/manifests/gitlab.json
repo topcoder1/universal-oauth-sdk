@@ -1,0 +1,21 @@
+{
+  "name": "gitlab",
+  "displayName": "GitLab",
+  "authorizationEndpoint": "https://gitlab.com/oauth/authorize",
+  "tokenEndpoint": "https://gitlab.com/oauth/token",
+  "revocationEndpoint": "https://gitlab.com/oauth/revoke",
+  "scopes": [
+    "api",
+    "read_user",
+    "read_repository",
+    "write_repository"
+  ],
+  "tokenEndpointAuthMethods": [
+    "client_secret_post",
+    "client_secret_basic"
+  ],
+  "pkceRecommended": true,
+  "deviceCodeSupported": false,
+  "refreshTokenExpected": true,
+  "notes": "GitLab OAuth for accessing repositories and user data. Works with gitlab.com and self-hosted instances."
+}
