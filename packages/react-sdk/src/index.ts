@@ -29,6 +29,7 @@ export { useOAuth } from './hooks/useOAuth'
 
 // Components (for advanced usage)
 export { ProviderList } from './components/ProviderList'
+export { OAuthCallback } from './components/OAuthCallback'
 
 // Types
 export type {

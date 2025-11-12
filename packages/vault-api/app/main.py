@@ -116,7 +116,7 @@ async def health_check():
 
 
 # Include API v1 routes
-from app.api.v1 import tokens, auth, health
+from app.api.v1 import tokens, auth, health, providers
 
 app.include_router(
     health.router,
@@ -133,6 +133,12 @@ app.include_router(
     tokens.router,
     prefix=f"{settings.API_V1_PREFIX}/tokens",
     tags=["tokens"]
+)
+
+app.include_router(
+    providers.router,
+    prefix=f"{settings.API_V1_PREFIX}",
+    tags=["providers"]
 )
 
 

@@ -76,10 +76,17 @@ export function useOAuth(options: UseOAuthOptions): UseOAuthReturn {
   }, [fetchProviders, fetchConnections])
 
   /**
-   * Initiate OAuth connection flow for a provider
+   * Initiate OAuth connection flow for a provider using popup window
    */
   const connect = useCallback(async (providerId: string) => {
     try {
+      // Create state parameter with provider and user info
+      const state = btoa(JSON.stringify({
+        provider: providerId,
+        user_id: userId,
+        timestamp: Date.now()
+      }))
+
       // Generate OAuth authorization URL
       const response = await fetch(`${apiUrl}/api/v1/oauth/authorize`, {
         method: 'POST',
@@ -90,7 +97,8 @@ export function useOAuth(options: UseOAuthOptions): UseOAuthReturn {
         body: JSON.stringify({
           provider: providerId,
           user_id: userId,
-          redirect_uri: `${window.location.origin}/oauth/callback`
+          redirect_uri: `${window.location.origin}/oauth/callback`,
+          state
         })
       })
 
@@ -100,16 +108,74 @@ export function useOAuth(options: UseOAuthOptions): UseOAuthReturn {
 
       const data = await response.json()
       
-      // Redirect to OAuth provider
-      if (data.authorization_url) {
-        window.location.href = data.authorization_url
+      if (!data.authorization_url) {
+        throw new Error('No authorization URL received')
       }
+
+      // Open OAuth in popup window
+      const width = 600
+      const height = 700
+      const left = window.screen.width / 2 - width / 2
+      const top = window.screen.height / 2 - height / 2
+      
+      const popup = window.open(
+        data.authorization_url,
+        'oauth-popup',
+        `width=${width},height=${height},left=${left},top=${top},toolbar=no,menubar=no,scrollbars=yes`
+      )
+
+      // Check if popup was blocked
+      if (!popup || popup.closed || typeof popup.closed === 'undefined') {
+        console.log('Popup blocked, falling back to redirect')
+        window.location.href = data.authorization_url
+        return
+      }
+
+      // Listen for messages from popup
+      const handleMessage = (event: MessageEvent) => {
+        // Verify origin
+        if (event.origin !== window.location.origin) {
+          return
+        }
+
+        if (event.data.type === 'oauth-success') {
+          console.log('✅ OAuth successful, refreshing connections')
+          popup.close()
+          
+          // Refresh connections to show new connection
+          fetchConnections()
+          
+          // Clean up listener
+          window.removeEventListener('message', handleMessage)
+          clearInterval(checkClosed)
+        } else if (event.data.type === 'oauth-error') {
+          console.log('❌ OAuth error:', event.data.error)
+          popup.close()
+          setError(new Error(event.data.error_description || event.data.error))
+          
+          // Clean up listener
+          window.removeEventListener('message', handleMessage)
+          clearInterval(checkClosed)
+        }
+      }
+
+      window.addEventListener('message', handleMessage)
+
+      // Check if popup was closed manually
+      const checkClosed = setInterval(() => {
+        if (popup.closed) {
+          console.log('Popup closed by user')
+          clearInterval(checkClosed)
+          window.removeEventListener('message', handleMessage)
+        }
+      }, 1000)
+
     } catch (err) {
       setError(err as Error)
       console.error('Error connecting provider:', err)
       throw err
     }
-  }, [apiKey, apiUrl, userId])
+  }, [apiKey, apiUrl, userId, fetchConnections])
 
   /**
    * Disconnect (revoke) an OAuth connection

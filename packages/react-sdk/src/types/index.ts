@@ -11,6 +11,7 @@ export interface OAuthProvider {
   authUrl?: string
   tokenUrl?: string
   scopes?: string[]
+  tags?: string[]
 }
 
 export interface Connection {

@@ -71,5 +71,5 @@ async def register_tenant(
     return APIKeyResponse(
         api_key=api_key,
         key_prefix=key_record.key_prefix,
-        tenant=TenantResponse.from_orm(tenant)
+        tenant=TenantResponse.model_validate(tenant)
     )

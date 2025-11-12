@@ -44,6 +44,14 @@ class Settings(BaseSettings):
     # Monitoring
     SENTRY_DSN: str = ""
     
+    # OAuth Provider Credentials
+    GOOGLE_CLIENT_ID: str = ""
+    GOOGLE_CLIENT_SECRET: str = ""
+    GITHUB_CLIENT_ID: str = ""
+    GITHUB_CLIENT_SECRET: str = ""
+    SLACK_CLIENT_ID: str = ""
+    SLACK_CLIENT_SECRET: str = ""
+    
     class Config:
         env_file = ".env"
         case_sensitive = True

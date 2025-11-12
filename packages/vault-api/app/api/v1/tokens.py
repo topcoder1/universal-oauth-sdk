@@ -138,7 +138,7 @@ async def list_tokens(
     tokens = query.offset(offset).limit(limit).all()
     
     return TokenList(
-        data=[TokenResponse.from_orm(t) for t in tokens],
+        data=[TokenResponse.model_validate(t) for t in tokens],
         total=total,
         limit=limit,
         offset=offset,
